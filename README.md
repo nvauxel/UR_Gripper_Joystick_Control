@@ -23,6 +23,6 @@ Right joystick low : translation following -y
 Right joystick left : translation following -x
 Right joystick right : translation following +x
 
-Use start button to do translations following -z and RB button to do translations following +z. 
+Use A button to do translations following -z and Y button to do translations following +z. 
 
 To stop a translation, press back button. 
