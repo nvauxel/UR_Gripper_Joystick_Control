@@ -35,13 +35,13 @@ def callback(j):
 #All buttons / axes of the joystick are affected to a variable with the appropriate name.
     
   
-    if l3 == 1:
+    if x == 1:
         c.write_single_register(132,1)
         print("MODBUS opening command sent")
         rospy.sleep(0.5)
         c.write_single_register(132,0)
 
-    elif r3 == 1:
+    elif b == 1:
         c.write_single_register(133,1)
         print("MODBUS closing command sent")
         rospy.sleep(0.5)
