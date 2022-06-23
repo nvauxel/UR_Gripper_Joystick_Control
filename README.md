@@ -14,7 +14,7 @@ First of all, you need to clone the ROS Driver package for UR robot and launch t
 
 Then, you can import the urp file and run it and run at the same time the subscriber node and you can control the robot. 
 
-To use the Gripper, use L3 button to open it and R3 button to close it. 
+To use the Gripper, use X button to open it and B button to close it. 
 
 To move the UR3 robot, you can do translations following x, y and z axis :
 
