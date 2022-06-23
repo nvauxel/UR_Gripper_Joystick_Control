@@ -13,3 +13,16 @@ How does it work ?
 First of all, you need to clone the ROS Driver package for UR robot and launch the bring-up of your robot and run the node, install the joy package to use a joystick and run the joy_node node. 
 
 Then, you can import the urp file and run it and run at the same time the subscriber node and you can control the robot. 
+
+To use the Gripper, use L3 button to open it and R3 button to close it. 
+
+To move the UR3 robot, you can do translations following x, y and z axis :
+
+Right joystick high : translation following +y
+Right joystick low : translation following -y
+Right joystick left : translation following -x
+Right joystick right : translation following +x
+
+Use start button to do translations following -z and RB button to do translations following +z. 
+
+To stop a translation, press back button. 
