@@ -6,11 +6,21 @@ Code will be divided in two parts :
 
 - A ROS subcriber node named ur_gripper_joystick_control.py which subscribes to the /joy topic to collect information when joystick's buttons are pressed or axes' buttons are moved. The program will use the Modbus communication protocol to communicate with the robot software.
 
-- A program on Polyscore named Gripper_UR_Control.urp, the robot operating system, where we read Modbus variables to decide what kind of action / movement will be realised.
+- A program named Gripper_UR_Control.urp where we read Modbus variables to decide what kind of action / movement will be realised.
+
+Prerequisites : 
+
+- You need a Universal Robot with Polyscope installed (robot operating system)  
+- You need to install ModbusClient to use Modbus communication if you do not have it (Use sudo pip3 install yModbusTCP.client). 
+- You need a joystick. For exemple, Logitech Gamepad F710 Controller or Xbox 360 Controller. 
+- You need ROS 1 Melodic or Noetic on your computer and Universal Robot ROS Driver (clone this git https://github.com/UniversalRobots/Universal_Robots_ROS_Driver)
+ 
+Communication Configuration between robot / computer :  
+
 
 How does it work ? 
 
-First of all, you need to clone the ROS Driver package for UR robot and launch the bring-up of your robot and run the node, install the joy package to use a joystick and run the joy_node node. 
+First of all, you need to clone the ROS Driver package for UR robot and launch the bring-up of your robot and run the node, install the joy package (clone that git https://github.com/ros-drivers/joystick_drivers) to use a joystick and run the joy_node node. 
 
 Then, you can import the urp file and run it and run at the same time the subscriber node and you can control the robot. 
 
