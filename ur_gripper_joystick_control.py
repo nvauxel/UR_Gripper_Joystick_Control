@@ -12,6 +12,7 @@ c.host=MODBUS_SERVER_IP
 c.port=502
 c.open()
 
+#Modbus server parameters and starting.
 
 def callback(j):
     a=j.buttons[0]
@@ -31,57 +32,58 @@ def callback(j):
     start=j.buttons[7]
     back=j.buttons[6]
 
+#All buttons / axes of the joystick are affected to a variable with the appropriate name.
     
   
     if l3 == 1:
         c.write_single_register(132,1)
-        print("Commande MODBUS d'ouverture envoyée")
+        print("MODBUS opening command sent")
         rospy.sleep(0.5)
         c.write_single_register(132,0)
 
     elif r3 == 1:
         c.write_single_register(133,1)
-        print("Commande MODBUS de fermeture envoyée")
+        print("MODBUS closing command sent")
         rospy.sleep(0.5)
         c.write_single_register(133,0)
     
     elif joydroitgd == 1 :
         c.write_single_register(135,1)
-        print("Translation suivant les x négatifs")
+        print("Translation following negatives x")
     if back == 1 :
         c.write_single_register(135,0)
     
     elif joydroitgd == -1 :
         c.write_single_register(134,1)
-        print("Translation suivant les x positifs")
+        print("Translation following positives x")
     if back == 1 :
         c.write_single_register(134,0)
     
     elif joydroithb == -1 :
         c.write_single_register(137,1)
-        print("Translation suivant les y négatifs")
+        print("Translation following negatives y")
     if back == 1 :
         c.write_single_register(137,0)
     
     elif joydroithb == 1 :
         c.write_single_register(136,1)
-        print("Translation suivant les y positifs")
+        print("Translation following positives y")
     if back == 1 :
         c.write_single_register(136,0)      
     
     elif a == 1 :
         c.write_single_register(139,1)
-        print("Translation suivant les z négatifs")
+        print("Translation following negatives z")
     if back == 1 :
         c.write_single_register(139,0)
     
     elif y == 1 :
         c.write_single_register(138,1)
-        print("Translation suivant les z postifis")
+        print("Translation following positives z")
     if back == 1 :    
         c.write_single_register(138,0)
      
-    
+   #Back button is used to stop every translation by setting the modbus input register concerned to the boolean 0.   
       
 
 def listener():
@@ -91,6 +93,8 @@ def listener():
     rospy.Subscriber("/joy", Joy, callback)
 
     rospy.spin()
+
+#Subcription to the topic /joy to collect information from the joystick.
 
 if __name__ == '__main__':
     listener()
