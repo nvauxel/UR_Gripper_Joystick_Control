@@ -17,6 +17,13 @@ Prerequisites :
  
 Communication Configuration between robot / computer :  
 
+First, you need to configure connection between robot and computer. So, connect your computer to the robot with an RJ45 cable.
+Now on Polyscope, go to Settings > System > Network. Choose an valid IP adress like 192.168.xx.xx and set the subnet mask to 255.255.255.0 .
+On your computer, make sure that your network configuration is set to manual and choose an other ipadress but the same subnet mask (example : 192.168.56.42 on my robot and 192.168.56.1 on my computer).
+Once you see "Network is connected" on Polyscore, it's done !
+
+
+
 
 How does it work ? 
 
