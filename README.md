@@ -22,8 +22,7 @@ Now on Polyscope, go to Settings > System > Network. Choose an valid IP adress l
 On your computer, make sure that your network configuration is set to manual and choose an other ipadress but the same subnet mask (example : 192.168.56.42 on my robot and 192.168.56.1 on my computer).
 Once you see "Network is connected" on Polyscore, it's done !
 
-
-
+Then, you need to configure Modbus server to permit sending of information from the computer to the robot. 
 
 How does it work ? 
 
