@@ -25,7 +25,7 @@ Once you see "Network is connected" on Polyscore, it's done !
 Then, you need to configure Modbus server to permit sending of information from the computer to the robot. 
 Go to Installation > Fieldbus > MODBUS and make sur that your interface corresponds to the image named Modbus_Configuration.jpg
 
-How can I control robots ? 
+How can I control the robot ? 
 
 First of all, you need to clone the ROS Driver package for UR robot and launch the bring-up of your robot and run the node, install the joy package (clone that git https://github.com/ros-drivers/joystick_drivers) to use a joystick and run the joy_node node. 
 
@@ -43,3 +43,8 @@ Right joystick right : translation following +x
 Use A button to do translations following -z and Y button to do translations following +z. 
 
 To stop a translation, press back button. 
+
+How can I improve it ?
+
+You can change opening & closing velocity of the gripper or its angle of opening on Polyscope. 
+If you want to do specific translations, you can edit directly on Gripper_UR_Control.urp on Polyscope the instruction "until distance" and the lengh of the translation which is 2cm by default.
