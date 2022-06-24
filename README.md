@@ -23,6 +23,9 @@ On your computer, make sure that your network configuration is set to manual and
 Once you see "Network is connected" on Polyscore, it's done !
 
 Then, you need to configure Modbus server to permit sending of information from the computer to the robot. 
+Go to Installation > Fieldbus > MODBUS and make sur that your interface corresponds to the image named Modbus_Configuration.jpg
+
+
 
 How does it work ? 
 
